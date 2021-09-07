@@ -1,8 +1,21 @@
 package com.findmaximumnumber;
 
-public class FindMaximum {
+public class FindMaximum<T extends Comparable<T>> {
 
-	public static <T extends Comparable<T>> T getMax(T input1, T input2, T input3) {
+	T input1, input2, input3;
+
+	// contructor
+	FindMaximum(T input1, T input2, T input3) {
+		this.input1 = input1;
+		this.input2 = input2;
+		this.input3 = input3;
+	}
+
+	public T testMaximum() {
+		return FindMaximum.testMaximum(input1, input2, input3);
+	}
+
+	public static <T extends Comparable<T>> T testMaximum(T input1, T input2, T input3) {
 
 		// assume input1 is max
 		T maxValue = input1;
@@ -25,12 +38,12 @@ public class FindMaximum {
 
 	public static void main(String[] args) {
 
-		Integer intValue1 = 800, intValue2 = 100, intValue3 = 950;
-		Float floatValue1 = 6.3f, floatValue2 = 11.3f, floatValue3 = 14.7f;
+		Integer intValue1 = 300, intValue2 = 500, intValue3 = 960;
+		Float floatValue1 = 3.3f, floatValue2 = 3.5f, floatValue3 = 8.7f;
 		String stringValue1 = "Mango", stringValue2 = "Orange", stringValue3 = "PineApple";
 
-		getMax(intValue1, intValue2, intValue3);
-		getMax(floatValue1, floatValue2, floatValue3);
-		getMax(stringValue1, stringValue2, stringValue3);
+		new FindMaximum(intValue1, intValue2, intValue3).testMaximum();
+		new FindMaximum(floatValue1, floatValue2, floatValue3).testMaximum();
+		new FindMaximum(stringValue1, stringValue2, stringValue3).testMaximum();
 	}
 }
