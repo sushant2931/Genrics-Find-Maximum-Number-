@@ -5,6 +5,8 @@ import org.junit.Test;
 
 public class FloatMaximumTest {
 	  public void findMaxTC1()
+	  @Test
+	    public void findMaxTC1()
 	    {
 			Float floatValue1 = 6.3f , floatValue2 = 2.5f , floatValue3 = 3.3f;    	
 	    	FindMaximum find = new FindMaximum(floatValue1, floatValue2, floatValue3);
