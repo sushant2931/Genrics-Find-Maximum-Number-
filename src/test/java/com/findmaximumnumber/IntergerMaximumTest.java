@@ -8,34 +8,22 @@ public class IntergerMaximumTest {
 
 	@Test
 	public void findMaxTC1() {
-		
-		FindMaximum find = new FindMaximum();
-		Integer intObj1 = Integer.valueOf("800");
-		Integer intObj2 = Integer.valueOf("557");
-		Integer intObj3 = Integer.valueOf("500");
-		int maxIntValue = find.findMaxInt(intObj1, intObj2, intObj3);
-		Assertions.assertEquals(800, maxIntValue);
-	}
-
+		Integer intValue1 = 850 , intValue2 = 678 , intValue3 = 500;    	
+		Integer maxValue = FindMaximum.getMax(intValue1, intValue2, intValue3); 
+		Assertions.assertEquals(850, maxValue);
+		}
 	@Test
-	public void findMaxTC2() {
+    public void findMaxTC2(){
 		
-		FindMaximum find = new FindMaximum();
-		Integer intObj1 = Integer.valueOf("800");
-		Integer intObj2 = Integer.valueOf("850");
-		Integer intObj3 = Integer.valueOf("500");
-		int maxIntValue = find.findMaxInt(intObj1, intObj2, intObj3);
-		Assertions.assertEquals(850, maxIntValue);
-	}
-
+		Integer intValue1 = 800 , intValue2 = 900 , intValue3 = 500;    	
+		Integer maxValue = FindMaximum.getMax(intValue1, intValue2, intValue3); 
+		Assertions.assertEquals(900, maxValue);
+		}
 	@Test
-	public void findMaxTC3() {
+    public void findMaxTC3(){
 		
-		FindMaximum find = new FindMaximum();
-		Integer intObj1 = Integer.valueOf("800");
-		Integer intObj2 = Integer.valueOf("850");
-		Integer intObj3 = Integer.valueOf("950");
-		int maxIntValue = find.findMaxInt(intObj1, intObj2, intObj3);
-		Assertions.assertEquals(950, maxIntValue);
-	}
+		Integer intValue1 = 800 , intValue2 = 850 , intValue3 = 980;    	
+		Integer maxValue = FindMaximum.getMax(intValue1, intValue2, intValue3); 
+		Assertions.assertEquals(980, maxValue);
+		}
 }

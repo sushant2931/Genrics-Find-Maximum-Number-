@@ -6,31 +6,23 @@ import org.junit.Test;
 public class StringMaximumTest {
 	@Test
 	public void findMaxTC1() {
-		FindMaximum find = new FindMaximum();
-		String stringObj1 = String.valueOf("Pineapple");
-		String stringObj2 = String.valueOf("Apple");
-		String stringObj3 = String.valueOf("Orange");
-		String maxStringValue = find.findMaxString(stringObj1, stringObj2, stringObj3);
-		Assertions.assertEquals("Pineapple", maxStringValue);
+    	String stringValue1 = "PineApple" , stringValue2 = "Mango" , stringValue3 = "Orange";    	
+    	String maxValue = FindMaximum.getMax(stringValue1, stringValue2, stringValue3); 
+		Assertions.assertEquals("PineApple", maxValue);
 	}
-
 	@Test
 	public void findMaxTC2() {
-		FindMaximum find = new FindMaximum();
-		String stringObj1 = String.valueOf("Guava");
-		String stringObj2 = String.valueOf("Apple");
-		String stringObj3 = String.valueOf("Orange");
-		String maxStringValue = find.findMaxString(stringObj1, stringObj2, stringObj3);
-		Assertions.assertEquals("Orange", maxStringValue);
+		
+		String stringValue1 = "Grape" , stringValue2 = "Orange" , stringValue3 = "Mango";    	
+		String maxValue = FindMaximum.getMax(stringValue1, stringValue2, stringValue3); 
+		Assertions.assertEquals("Orange", maxValue);
+		
 	}
-
 	@Test
 	public void findMaxTC3() {
-		FindMaximum find = new FindMaximum();
-		String stringObj1 = String.valueOf("Guava");
-		String stringObj2 = String.valueOf("Apple");
-		String stringObj3 = String.valueOf("Pineapple");
-		String maxStringValue = find.findMaxString(stringObj1, stringObj2, stringObj3);
-		Assertions.assertEquals("Pineapple", maxStringValue);
+		String stringValue1 = "Mango" , stringValue2 = "Orange" , stringValue3 = "PineApple";    	
+		String maxValue = FindMaximum.getMax(stringValue1, stringValue2, stringValue3); 
+		Assertions.assertEquals("PineApple", maxValue);
 	}
+	
 }
