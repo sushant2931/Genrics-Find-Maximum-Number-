@@ -9,7 +9,7 @@ public class FindMaximum implements MaxOperation {
 	        Integer intObj2 = Integer.valueOf("557");
 	        Integer intObj3 = Integer.valueOf("500");
 	        int maxIntValue = find.findMaxInt(intObj1, intObj2, intObj3);
-	        System.out.println("Integer Maximum : " + maxIntValue);
+	        System.out.println("Integer Maximum Number is : " + maxIntValue);
 	    }
 	    public int findMaxInt(Integer intObj1, Integer intObj2, Integer intObj3) {
 	    	
